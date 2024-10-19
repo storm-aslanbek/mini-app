@@ -2,13 +2,14 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=667">
     <title>Learn2Earn - Python Course</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <div class="container">
+        {% csrf_token %}
         <h1>Python курсына қош келдіңіз!</h1>
         <div class="task-section">
             <h2>Сіздің келесі тапсырмаңыз</h2>
@@ -22,8 +23,14 @@
             <button id="submit-solution-btn">Шешімді тексеру</button>
             <div id="result-container"></div>
         </div>
+
+        <nav class="bottom-nav">
+            <a href="/check-task/" class="nav-link">Тапсырманы тексерту</a>
+            <a href="/register/" class="nav-link">Кіру</a>
+            <a href="#" class="nav-link">Профиль</a>
+        </nav>
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

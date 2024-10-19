@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проверка задания</title>
+    <title>Тапсырманы тексеру</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Проверка задания</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="user_code">Ваш код на Python:</label>
-        <textarea id="user_code" name="user_code" required></textarea><br>
+    <div class="container">
+        <h1>Тапсырманы тексеру</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="user_code">Ваш код на Python:</label>
+            <textarea id="user_code" name="user_code" required></textarea><br>
 
-        <label for="task_id">ID задания (фиктивное поле):</label>
-        <input type="text" id="task_id" name="task_id"><br>
+            <label for="task_id">Тапсырма ID-і (фиктивное поле):</label>
+            <input type="text" id="task_id" name="task_id"><br>
 
-        <button type="submit">Проверить код</button>
-    </form>
+            <button type="submit">Кодты тексерту</button>
+        </form>
+
+        <nav class="bottom-nav">
+            <a href="/check_task/" class="nav-link">Тапсырманы тексерту</a>
+            <a href="/register/" class="nav-link">Кіру</a>
+            <a href="#" class="nav-link">Профиль</a>
+        </nav>
+    </div>
 </body>
 </html>

@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Тіркелу</title>
 </head>
 <body>
-    <h1>Регистрация</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="first_name">Имя:</label>
-        <input type="text" id="first_name" name="first_name" required><br>
+    <div class="container">
+        <h1>Тіркелу</h1>
+        <form method="POST">
+            {% csrf_token %}
+        <label for="first_name">Аты:</label>
+        <input type="text" class="input" id="first_name" name="first_name" required><br>
 
-        <label for="last_name">Фамилия:</label>
-        <input type="text" id="last_name" name="last_name" required><br>
+        <label for="last_name">Тегі:</label>
+        <input type="text" class="input" id="last_name" name="last_name" required><br>
 
-        <label for="telegram_id">Telegram ID (фиктивное поле):</label>
-        <input type="text" id="telegram_id" name="telegram_id"><br>
+        <label for="telegram_id">Telegram ID:</label>
+        <input type="text" class="input" id="telegram_id" name="telegram_id"><br>
 
-        <button type="submit">Зарегистрироваться</button>
-    </form>
+        <button type="submit">Тіркелу</button>
+        </form>
+
+        <nav class="bottom-nav">
+            <a href="/check_task/" class="nav-link">Тапсырманы тексерту</a>
+            <a href="" class="nav-link">Басты бет</a>
+            <a href="#" class="nav-link">Профиль</a>
+        </nav>
+    </div>
 </body>
 </html>

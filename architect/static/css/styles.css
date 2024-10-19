@@ -4,15 +4,23 @@ body {
     color: #c7c7c7;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 500px;
+    text-align: center;
+    width: 100%; /* Фиксированная ширина */
+    max-width: 400;
+    height: 100%;
+    max-height: 620px;
     margin: 0 auto;
     padding: 20px;
     background-color: #2b2b2b;
     border-radius: 8px;
 }
+
+
 
 h1 {
     color: #5dbb63;
@@ -48,4 +56,38 @@ textarea {
 textarea:focus {
     outline: none;
     border: 1px solid #4da55b;
+}
+
+.solution-section {
+    width: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b5e20; /* Темно-зелёный для нижней панели */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.nav-link {
+    color: #e0e0e0; /* Светлый текст для навигации */
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #b2dfdb; /* Светло-зелёный при наведении */
+}
+
+
+
+.input {
+    color: #386650;
 }
