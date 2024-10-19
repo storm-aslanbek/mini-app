@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка задания</title>
+</head>
+<body>
+    <h1>Проверка задания</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="user_code">Ваш код на Python:</label>
+        <textarea id="user_code" name="user_code" required></textarea><br>
+
+        <label for="task_id">ID задания (фиктивное поле):</label>
+        <input type="text" id="task_id" name="task_id"><br>
+
+        <button type="submit">Проверить код</button>
+    </form>
+</body>
+</html>

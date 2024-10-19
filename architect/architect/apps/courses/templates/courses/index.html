@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn2Earn - Python Course</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Python курсына қош келдіңіз!</h1>
+        <div class="task-section">
+            <h2>Сіздің келесі тапсырмаңыз</h2>
+            <button id="generate-task-btn">Тапсырма алу</button>
+            <div id="task-container"></div>
+        </div>
+
+        <div class="solution-section">
+            <h2>Шешім енгізіңіз</h2>
+            <textarea id="solution-input" placeholder="Шешіміңізді осында жазыңыз"></textarea>
+            <button id="submit-solution-btn">Шешімді тексеру</button>
+            <div id="result-container"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
